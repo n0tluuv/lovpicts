@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOVPICTS · Photocards y Polaroids personalizadas</title>
+<style>
+  :root{
+    --rosa:#b83b7e; --mauve:#a65c84; --lila:#c4b5e0; --tan:#c4846a; --texto:#2b2433;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.5}
+  header{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;position:sticky;top:0;background:#fff;z-index:10}
+  nav{background:var(--lila);border-radius:40px;padding:14px 36px;display:flex;gap:36px}
+  nav a{text-decoration:none;color:var(--texto);font-size:1.1rem}
+  nav a:hover{color:var(--rosa)}
+  .logo{width:70px;height:70px;border-radius:50%;background:var(--lila);display:grid;place-items:center;font-weight:700;font-size:.7rem;color:#4a2c7a;border:3px solid #fff;box-shadow:0 0 0 2px var(--lila)}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:30px 5% 60px;align-items:center}
+  .hero h3{color:var(--rosa);font-size:1.6rem;letter-spacing:.5px}
+  .hero h1{font-size:4.5rem;line-height:1;margin:20px 0}
+  .hero h1 span{color:var(--tan);display:block}
+  .hero h1 b{color:var(--rosa)}
+  .hero p{max-width:460px;margin-bottom:24px}
+  .btn{display:inline-block;background:var(--mauve);color:#fff;font-weight:700;text-transform:uppercase;padding:12px 22px;border:none;border-radius:6px;cursor:pointer;text-decoration:none;font-size:1.1rem}
+  .btn:hover{background:var(--rosa)}
+  .collage{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:var(--mauve);padding:16px;border-radius:6px}
+  .collage .ph{aspect-ratio:3/4;background:linear-gradient(135deg,#e7d6ee,#c4b5e0);display:grid;place-items:center;font-size:2rem;border-radius:60px 60px 4px 4px;overflow:hidden}
+  .collage .ph:nth-child(n+4){border-radius:6px;aspect-ratio:1}
+  img{width:100%;height:100%;object-fit:cover;display:block}
+  section.sec{padding:60px 5%}
+  section.sec h2{color:var(--rosa);font-size:2.2rem;margin-bottom:8px}
+  .sub{margin-bottom:24px}
+  .filtros{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+  .filtros button{border:2px solid var(--lila);background:#fff;padding:8px 18px;border-radius:30px;cursor:pointer;font-size:1rem}
+  .filtros button.activo{background:var(--lila)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+  .card{border:1px solid #eadff3;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(120,80,160,.08)}
+  .card .foto{aspect-ratio:3/4;background:linear-gradient(135deg,#f3e3ee,#c4b5e0);display:grid;place-items:center;font-size:3rem}
+  .card .info{padding:14px}
+  .card h4{margin-bottom:4px}
+  .precio{color:var(--rosa);font-weight:700;margin-bottom:10px}
+  .card .btn{font-size:.85rem;padding:8px 14px}
+  #paquetes{background:#f6f1fb}
+  .paquetes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+  .paq{background:#fff;border-radius:14px;padding:26px;text-align:center;border-top:6px solid var(--mauve)}
+  .paq h3{color:var(--rosa);margin-bottom:6px}
+  .paq .precio{font-size:1.6rem;margin:10px 0}
+  .paq ul{list-style:none;margin-bottom:18px}
+  footer{text-align:center;padding:30px;background:var(--mauve);color:#fff}
+  .wa-flotante{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:40px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:20}
+  @media(max-width:800px){
+    .hero{grid-template-columns:1fr}
+    .hero h1{font-size:3.2rem}
+    nav{padding:12px 22px;gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="logo">LOVPICTS</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h3>PHOTOCARDS &amp; POLAROIDS</h3>
+      <h1><span>LOV</span><b>PICTS</b></h1>
+      <p>¡Ofrecemos photocards y polaroids personalizadas de tus artistas favs! Encuentra a tus idols, cantantes y personajes favoritos. ♡ ¡Colecciona tus momentos favoritos con LOVPICTS!</p>
+      <a class="btn" id="btn-whatsapp-hero" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <!-- Para usar tus fotos: reemplaza el emoji por <img src="foto1.jpg" alt="photocard"> -->
+    <div class="collage">
+      <div class="ph">💜</div><div class="ph">🌸</div><div class="ph">✨</div>
+      <div class="ph">🎤</div><div class="ph">📸</div><div class="ph">🦢</div>
+    </div>
+  </section>
+
+  <section class="sec" id="catalogo">
+    <h2>Catálogo</h2>
+    <p class="sub">Elige tu favorita y pídela por WhatsApp.</p>
+    <div class="filtros">
+      <button class="activo" data-filtro="todos">Todos</button>
+      <button data-filtro="photocard">Photocards</button>
+      <button data-filtro="polaroid">Polaroids</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="sec" id="paquetes">
+    <h2>Paquetes</h2>
+    <p class="sub">Ahorra llevando más de una.</p>
+    <div class="paquetes" id="paquetes-lista"></div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <p>¿Dudas o pedidos personalizados?</p><br>
+  <a class="btn" style="background:#fff;color:var(--rosa)" id="btn-whatsapp-footer" href="#" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+  <p style="margin-top:18px">✉️ <a href="mailto:lovpicts@gmail.com" style="color:#fff">lovpicts@gmail.com</a></p>
+  <p style="margin-top:10px;font-size:.9rem">© LOVPICTS</p>
+</footer>
+
+<a class="wa-flotante" id="btn-whatsapp-flotante" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<script>
+  // ====== EDITA ESTO ======
+  const NUMERO = "51922648025"; // número con código de país (Perú = 51), sin + ni espacios
+
+  const productos = [
+    {nombre:"Photocard personalizada", tipo:"photocard", precio:"S/ 3.00", emoji:"💜", foto:""},
+    {nombre:"Photocard holográfica",   tipo:"photocard", precio:"S/ 5.00", emoji:"✨", foto:""},
+    {nombre:"Photocard de idol",       tipo:"photocard", precio:"S/ 3.50", emoji:"🎤", foto:""},
+    {nombre:"Polaroid clásica",        tipo:"polaroid",  precio:"S/ 4.00", emoji:"📸", foto:""},
+    {nombre:"Polaroid con marco",      tipo:"polaroid",  precio:"S/ 5.00", emoji:"🌸", foto:""},
+    {nombre:"Polaroid personalizada",  tipo:"polaroid",  precio:"S/ 6.00", emoji:"🦢", foto:""}
+  ];
+
+  const paquetes = [
+    {nombre:"Mini",   precio:"S/ 10", items:["3 photocards","Tu artista favorito"]},
+    {nombre:"Fan",    precio:"S/ 20", items:["6 photocards","2 polaroids","Diseño personalizado"]},
+    {nombre:"Súper fan", precio:"S/ 35", items:["12 photocards","5 polaroids","Diseño personalizado","Envoltorio especial"]}
+  ];
+  // ========================
+
+  const link = msg => `https://wa.me/${NUMERO}?text=${encodeURIComponent(msg)}`;
+
+  // Botones generales de WhatsApp
+  const saludo = "¡Hola LOVPICTS! Quiero más información sobre sus photocards y polaroids 💜";
+  ["hero","footer","flotante"].forEach(id => {
+    document.getElementById("btn-whatsapp-"+id).href = link(saludo);
+  });
+
+  // Catálogo
+  const grid = document.getElementById("grid");
+  function pintar(filtro){
+    grid.innerHTML = "";
+    productos.filter(p => filtro === "todos" || p.tipo === filtro).forEach(p => {
+      const c = document.createElement("div");
+      c.className = "card";
+      c.innerHTML = `
+        <div class="foto">${p.foto ? `<img src="${p.foto}" alt="${p.nombre}">` : p.emoji}</div>
+        <div class="info">
+          <h4>${p.nombre}</h4>
+          <div class="precio">${p.precio}</div>
+          <a class="btn" target="_blank" rel="noopener" href="${link("¡Hola! Quiero pedir: " + p.nombre + " (" + p.precio + ")")}">Pedir</a>
+        </div>`;
+      grid.appendChild(c);
+    });
+  }
+  pintar("todos");
+
+  document.querySelectorAll(".filtros button").forEach(b => {
+    b.addEventListener("click", () => {
+      document.querySelectorAll(".filtros button").forEach(x => x.classList.remove("activo"));
+      b.classList.add("activo");
+      pintar(b.dataset.filtro);
+    });
+  });
+
+  // Paquetes
+  document.getElementById("paquetes-lista").innerHTML = paquetes.map(p => `
+    <div class="paq">
+      <h3>${p.nombre}</h3>
+      <div class="precio">${p.precio}</div>
+      <ul>${p.items.map(i => `<li>${i}</li>`).join("")}</ul>
+      <a class="btn" target="_blank" rel="noopener" href="${link("¡Hola! Quiero el paquete " + p.nombre + " (" + p.precio + ")")}">Lo quiero</a>
+    </div>`).join("");
+</script>
+</body>
+</html>
